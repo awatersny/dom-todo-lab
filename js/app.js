@@ -2,6 +2,7 @@
 const textBox = document.getElementById('text-box');
 const todoList = document.getElementById('todo-list');
 const submitButton = document.getElementById('submit-button');
+const resetButton = document.getElementById('reset-button');
 
 const addLi = evt => {
   if (textBox.value !== '') {
@@ -17,3 +18,9 @@ const addLi = evt => {
 }
 // Add an event listener to the button that listens to click events. When the button is clicked, we need to:
 submitButton.addEventListener('click', addLi);
+
+const resetTodoList = evt => {
+  
+}
+
+resetButton.addEventListener('click', resetTodoList);

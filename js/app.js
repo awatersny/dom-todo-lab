@@ -20,6 +20,7 @@ const addLi = evt => {
 submitButton.addEventListener('click', addLi);
 
 const resetTodoList = evt => {
+  textBox.value = '';
   todoList.textContent = '';
 }
 

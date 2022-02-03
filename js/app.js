@@ -14,6 +14,8 @@ const addLi = evt => {
     textBox.value = '';
     //     - Add the new `li` element to the page, inside the `ul` element.
     todoList.appendChild(newLi);
+    //     - Event Listener for individual removal
+    newLi.addEventListener('click', removeSelfOnCLick);
   }
 }
 // Add an event listener to the button that listens to click events. When the button is clicked, we need to:
@@ -22,6 +24,10 @@ submitButton.addEventListener('click', addLi);
 const resetTodoList = evt => {
   textBox.value = '';
   todoList.textContent = '';
+}
+
+const removeSelfOnCLick = evt => {
+  evt.target.remove();
 }
 
 resetButton.addEventListener('click', resetTodoList);
